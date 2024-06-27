@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mustar/robot_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8d43f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8d43f.dir/build.make CMakeFiles/cmTC_8d43f.dir/build
+make[1]: Entering directory '/home/mustar/robot_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d43f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8d43f.dir/CheckSymbolExists.c.o   -c /home/mustar/robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8d43f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d43f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8d43f.dir/CheckSymbolExists.c.o  -o cmTC_8d43f 
+CMakeFiles/cmTC_8d43f.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8d43f.dir/build.make:97: recipe for target 'cmTC_8d43f' failed
+make[1]: *** [cmTC_8d43f] Error 1
+make[1]: Leaving directory '/home/mustar/robot_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8d43f/fast' failed
+make: *** [cmTC_8d43f/fast] Error 2
+
+File /home/mustar/robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mustar/robot_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_40acf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40acf.dir/build.make CMakeFiles/cmTC_40acf.dir/build
+make[1]: Entering directory '/home/mustar/robot_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40acf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_40acf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_40acf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40acf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_40acf.dir/CheckFunctionExists.c.o  -o cmTC_40acf -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_40acf.dir/build.make:97: recipe for target 'cmTC_40acf' failed
+make[1]: *** [cmTC_40acf] Error 1
+make[1]: Leaving directory '/home/mustar/robot_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_40acf/fast' failed
+make: *** [cmTC_40acf/fast] Error 2
+
+
