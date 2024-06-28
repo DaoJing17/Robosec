@@ -43,7 +43,7 @@ pip install ffmpeg-python
 
 
 ## Steps to run this project
-### 1. First, open a new terminal and type the following command in the terminal
+### 1. First, open a new terminal and type the following command in the terminal:
 ``` $ roslaunch usb_cam usb_cam-test.launch ```
 ### 2. Open a new terminal and type the following command to run the face_recognition_node:
 ```
