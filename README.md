@@ -33,7 +33,10 @@ conda 3.7.0
 ``` $ source activate yourenvname ``` <br><br>
 
 ## Install the required library
-``` $ pip install -r requirements.txt ```
+``` 
+$ source activate yourenvname
+$ pip install -r requirements.txt
+```
 ### Install the speechbrain.inference librart
 ```
 pip install git+https://github.com/speechbrain/speechbrain.git@develop 
